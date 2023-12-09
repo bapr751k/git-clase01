@@ -1,0 +1,158 @@
+olda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git add .
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ ls
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:16 ./
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:15 ../
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:30 .git/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ ls -la .git/
+total 11
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:35 ./
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:16 ../
+-rw-r--r-- 1 rolda 197610 130 dic.  8 20:16 config
+-rw-r--r-- 1 rolda 197610  73 dic.  8 20:16 description
+-rw-r--r-- 1 rolda 197610  23 dic.  8 20:16 HEAD
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:16 hooks/
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:16 info/
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:16 objects/
+drwxr-xr-x 1 rolda 197610   0 dic.  8 20:16 refs/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ rm -r .git/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01
+$ ls -la .git/
+ls: cannot access '.git/': No such file or directory
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01
+$ git init
+Initialized empty Git repository in D:/Bbltk_2024/devf/dojo/git-clase01/.git/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:46 ./
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:15 ../
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:46 .git/
+drwxr-xr-x 1 rolda 197610 0 dic.  8 20:45 css/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git add index.htm
+fatal: pathspec 'index.htm' did not match any files
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git add index.html
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css/
+
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git add css/
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   css/styles.css
+        new file:   index.html
+
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git commit -m 'Preparación del espacio de trabajo index y css de la clase dojo de Git en DevF'
+[master (root-commit) 4634c08] Preparación del espacio de trabajo index y css de la clase dojo de Git en DevF
+ 2 files changed, 380 insertions(+)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git log
+commit 4634c08908c82913a04f87abb531069f3d302622 (HEAD -> master)
+Author: Roldan Bacilio Puon <roldan.bacilio@hotmail.com>
+Date:   Fri Dec 8 20:58:04 2023 -0600
+
+    Preparación del espacio de trabajo index y css de la clase dojo de Git en DevF
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$ git remote add origin https://github.com/bapr751k/git-clase01.git
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (master)
+$  git branch -M main
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 3.74 KiB | 1.25 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bapr751k/git-clase01.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+rolda@D3LLT7600 MINGW64 /d/Bbltk_2024/devf/dojo/git-clase01 (main)
+$
+
+
